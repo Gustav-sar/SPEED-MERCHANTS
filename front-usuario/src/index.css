@@ -1,0 +1,284 @@
+/* 
+
+:root {
+  --text: #6b6375;
+  --text-h: #08060d;
+  --bg: #fff;
+  --border: #e5e4e7;
+  --code-bg: #f4f3ec;
+  --accent: #aa3bff;
+  --accent-bg: rgba(170, 59, 255, 0.1);
+  --accent-border: rgba(170, 59, 255, 0.5);
+  --social-bg: rgba(244, 243, 236, 0.5);
+  --shadow:
+    rgba(0, 0, 0, 0.1) 0 10px 15px -3px, rgba(0, 0, 0, 0.05) 0 4px 6px -2px;
+
+
+  --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
+  --heading: system-ui, 'Segoe UI', Roboto, sans-serif;
+  --mono: ui-monospace, Consolas, monospace;
+
+  font: 18px/145% var(--sans);
+  letter-spacing: 0.18px;
+  color-scheme: light dark;
+  color: var(--text);
+  background: var(--bg);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  @media (max-width: 1024px) {
+    font-size: 16px;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --text: #9ca3af;
+    --text-h: #f3f4f6;
+    --bg: #16171d;
+    --border: #2e303a;
+    --code-bg: #1f2028;
+    --accent: #c084fc;
+    --accent-bg: rgba(192, 132, 252, 0.15);
+    --accent-border: rgba(192, 132, 252, 0.5);
+    --social-bg: rgba(47, 48, 58, 0.5);
+    --shadow:
+      rgba(0, 0, 0, 0.4) 0 10px 15px -3px, rgba(0, 0, 0, 0.25) 0 4px 6px -2px;
+  }
+
+  #social .button-icon {
+    filter: invert(1) brightness(2);
+  }
+}
+
+/* body {
+  margin: 0;
+} */
+
+/* body, html {
+  height: 100%;
+  margin: 0;
+}
+
+
+body {
+  background-color: #0f0f0f;
+  color: #e0e0e0;
+  font-family: 'Arial', sans-serif;
+}
+
+.card {
+  background-color: #1a1a1a;
+  border: 1px solid #333;
+}
+
+.btn-success {
+  background-color: #b71c1c;
+  border-color: #b71c1c;
+}
+
+.btn-warning {
+  background-color: #ffcc00;
+  color: #000;
+}
+
+.navbar {
+  background-color: #0a0a0a;
+}
+
+h1, h2, h3 {
+  color: #ffcc00;
+}
+
+
+
+
+
+
+
+#root {
+  background-color:#0a0a0a;
+  height: 100%;
+  width: 11126px;
+  max-width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  border-inline: 1px solid var(--border);
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+h1,
+h2 {
+  font-family: var(--heading);
+  font-weight: 500;
+  color: var(--text-h);
+}
+
+h1 {
+  font-size: 56px;
+  letter-spacing: -1.68px;
+  margin: 32px 0;
+  @media (max-width: 1024px) {
+    font-size: 36px;
+    margin: 20px 0;
+  }
+}
+h2 {
+  font-size: 24px;
+  line-height: 118%;
+  letter-spacing: -0.24px;
+  margin: 0 0 8px;
+  @media (max-width: 1024px) {
+    font-size: 20px;
+  }
+}
+p {
+  margin: 0;
+}
+
+code,
+.counter {
+  font-family: var(--mono);
+  display: inline-flex;
+  border-radius: 4px;
+  color: var(--text-h);
+}
+
+code {
+  font-size: 15px;
+  line-height: 135%;
+  padding: 4px 8px;
+  background: var(--code-bg);
+} */
+ 
+
+/* ==========================================================================
+   1. RESETEAR VARIABLES DE BOOTSTRAP (El secreto para apagar la luz)
+   ========================================================================== */
+:root {
+  --bs-body-bg: #0d0e12 !important;     /* Obliga a Bootstrap a usar fondo oscuro */
+  --bs-body-color: #ffffff !important;  /* Obliga a Bootstrap a usar texto blanco */
+  --bs-tertiary-bg: #161a22 !important; /* Fondo para elementos secundarios */
+}
+
+/* ==========================================================================
+   2. ESTILOS BASE DE LA APLICACIÓN
+   ========================================================================== */
+html, body, #root {
+  background-color: #0d0e12 !important;
+  color: #ffffff !important;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+/* Títulos principales */
+h1, h2, h3, .ProductosDestacados_titulo {
+  color: #ffcc00 !important; /* Color Oro Metal */
+  font-weight: 700 !important;
+  letter-spacing: -0.5px;
+}
+
+/* ==========================================================================
+   3. COMPONENTES: TARJETAS DE DISCOS (CARDS) - OPTIMIZADO PARA PANTALLAS
+   ========================================================================== */
+.card {
+  /* Aclaramos un poquito el gris (de #161a22 a #1e2330) para generar contraste con el fondo negro */
+  background-color: #1e2330 !important; 
+  border: 1px solid #3a4454 !important; /* Un borde un poco más claro para delimitar la tarjeta */
+  border-radius: 12px !important;
+  padding: 16px !important;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6) !important;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  border-color: #ffcc00 !important;
+}
+
+/* Forzamos que el título del disco sea Blanco Puro (Legibilidad 100%) */
+.card-title {
+  color: #ffffff !important;
+  font-size: 1.15rem !important;
+  font-weight: 600 !important;
+  margin-bottom: 8px !important;
+}
+
+/* El nombre del Artista o Banda en un Gris Claro/Plata muy nítido */
+.card-text, 
+.card p {
+  color: #e2e8f0 !important; /* Gris claro de alta visibilidad */
+  font-size: 0.95rem !important;
+}
+
+/* El precio en Amarillo Oro Brillante */
+.card .text-warning, 
+.card [class*="precio"], 
+.card span {
+  color: #ffcc00 !important;
+  font-weight: 700 !important;
+  font-size: 1.3rem !important;
+  display: block;
+  margin: 12px 0 !important;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8); /* Sombra al texto para que resalte */
+}
+
+/* ==========================================================================
+   4. COMPONENTES: BOTONES Y NAVEGACIÓN
+   ========================================================================== */
+/* Botón principal de acción (Ver Detalle / Guardar) */
+.card .btn-warning, 
+.btn-warning,
+.btn-success {
+  background-color: #ffcc00 !important;
+  border-color: #ffcc00 !important;
+  color: #0d0e12 !important;
+  font-weight: 700 !important;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 0.5px;
+}
+
+.card .btn-warning:hover, 
+.btn-warning:hover {
+  background-color: #e6b800 !important;
+  border-color: #e6b800 !important;
+}
+
+/* Botón secundario (Ver Catálogo Completo) */
+.btn-outline-dark, 
+[class*="btn-outline"] {
+  color: #ffcc00 !important;
+  border-color: #ffcc00 !important;
+  background-color: transparent !important;
+  font-weight: 600 !important;
+  padding: 10px 24px !important;
+}
+
+.btn-outline-dark:hover {
+  background-color: #ffcc00 !important;
+  color: #0d0e12 !important;
+}
+
+/* Barra de navegación superior */
+.navbar {
+  background-color: #060709 !important;
+  border-bottom: 1px solid #2d3139 !important;
+  padding: 0.8rem 2rem !important;
+}
+
+.navbar .nav-link {
+  color: #ffffff !important;
+  font-weight: 500 !important;
+  transition: color 0.2s;
+}
+
+.navbar .nav-link:hover {
+  color: #ffcc00 !important;
+}
