@@ -22,7 +22,7 @@
 │  - productos        │
 │  - ventas           │
 │  - detalle_venta    │
-└─────────────────────┘
+
 
 
 ### Flujo principal:
