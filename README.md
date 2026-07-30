@@ -17,7 +17,7 @@
 
 
 
-    PostgreSQL   - --->
+|    PostgreSQL   - --->
 │  - usuarios         │
 │  - productos        │
 │  - ventas           │
