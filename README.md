@@ -23,12 +23,3 @@ graph TD
     F --> I
     F --> J
 ```
-
-
-PORT=3001
-DB_USER=tu_usuario_postgres
-DB_PASSWORD=tu_contraseña
-DB_NAME=speed-merchants
-DB_HOST=localhost
-DB_PORT=5432
-JWT_SECRET=tu_secreto_super_seguro
