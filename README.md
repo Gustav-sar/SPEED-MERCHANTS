@@ -1,43 +1,29 @@
-# SPEED-MERCHANTS
+```mermaid
+graph TD
+    subgraph Frontend (React + Vite)
+        A[Interfaz de Usuario] --> B[Contexto API / React Router]
+        B --> C[Bootstrap Styling]
+    end
 
-┌─────────────────────┐         ┌─────────────────────┐
-│     FRONTEND        │         │      BACKEND        │
-│   (React + Vite)    │◄───────►│  (Node.js + Express)│
-│                     │  HTTP   │                     │
-│  - Context API      │  REST   │  - JWT Auth         │
-│  - React Router     │         │  - Controllers      │
-│  - Bootstrap        │         │  - Models           │
-└─────────────────────┘         └──────────┬──────────┘
-│
-▼
+    subgraph Backend (Node.js + Express)
+        D[Rutas / REST API] --> E[Controladores]
+        E --> F[Modelos]
+    end
 
+    subgraph Base de Datos (PostgreSQL)
+        G[(usuarios)]
+        H[(productos)]
+        I[(ventas)]
+        J[(detalle_venta)]
+    end
 
+    C -- "Peticiones HTTP + JWT Auth" --> D
+    F --> G
+    F --> H
+    F --> I
+    F --> J
+```
 
-
-
-
-|    PostgreSQL   - --->
-│  - usuarios         │
-│  - productos        │
-│  - ventas           │
-│  - detalle_venta    │
-
-
-
-### Flujo principal:
-1. El usuario interactúa con el **Frontend** (React).
-2. El Frontend hace peticiones a la **API** del Backend (`/api/...`).
-3. El Backend valida el token JWT (si es necesario).
-4. El Backend consulta o modifica la base de datos **PostgreSQL**.
-5. La respuesta vuelve al Frontend y se actualiza la interfaz.
-
-## ⚙️ Variables de Entorno
-
-### Backend (`.env`)
-
-Crea un archivo `.env` dentro de la carpeta `SpeedMerchants-backend` con el siguiente contenido:
-
-```env
 PORT=3001
 DB_USER=tu_usuario_postgres
 DB_PASSWORD=tu_contraseña
